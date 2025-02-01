@@ -6,6 +6,13 @@ banner()
  echo '+-+-+-+-+-+-+-+ +-+-+-+-+-+-+'
  echo 'Desenvolvido por bl4dsc4n'
 }
+if [ "$#" -ne 1 ]; then
+    banner
+    echo
+    echo "Uso: $0 exemplo.com"
+    echo "Obs: nao utilizar http ou https, somente a URL."
+    exit 1
+fi
 banner
 wget2 --spider -r ${1} |  grep "Adding URL:" | cut -d " " -f 3 | tee ${1}.txt 
 echo "arquivos interessantes"
