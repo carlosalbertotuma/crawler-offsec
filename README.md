@@ -48,19 +48,7 @@ Como funciona
 
 Agradecemos às seguintes pessoas que contribuíram para este projeto:
 
-<table>
-  <tr>
-    <td align="center">
-      <a href="#">
-        <img src="bl4dsc4n.jpeg" width="100px;" alt="Carlos Tuma - Bl4dSc4n"/><br>
-        <sub>
-          <b>Carlos Tuma - Bl4dSc4n</b>
-        </sub>
-      </a>
-    </td>
-    <td align="center">
-  </tr>
-</table>
+Desenvolvido por Carlos Tuma - Bl4dSc4n
 
 
 ## 📝 Licença
