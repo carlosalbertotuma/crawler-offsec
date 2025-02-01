@@ -2,6 +2,8 @@
 
 ![image](https://github.com/user-attachments/assets/c3a76832-9c79-448f-8e0d-2f03a3a96832)
 
+![image](https://github.com/user-attachments/assets/ae1d707b-9445-40fb-a862-7978aec200fb)
+
 
 # Descrição
 Este crawler  foi desenvolvido para automatizar o processo de varredura de websites e subdomínios, coletando URLs importantes que podem ser úteis para testes de segurança e auditorias. Ele utiliza o wget2, uma ferramenta rápida e robusta para baixar e verificar sites de forma eficiente.
