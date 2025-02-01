@@ -19,19 +19,19 @@ sudo apt install wget2
 # Como usar
 
 Passo 1: Baixe o script
-Clone o repositório onde o script está armazenado (supondo que o repositório seja o git@github.com:usuario/repo.git):
+Clone o repositório onde o script está armazenado:
 
-git clone https://github.com/usuario/repo.git
-cd repo
+git clone https://github.com/carlosalbertotuma/crawler-offsec.git
+cd crawler-offsec
 Ou, se preferir, crie um arquivo .sh e cole o script nele.
 
 Passo 2: Torne o script executável
-chmod +x crawler.sh
+chmod +x crawler-offsec.sh
 
 Passo 3: Execute o script
 Para rodar o script, basta passar o domínio como parâmetro, como neste exemplo:
 
-./crawler.sh example.com
+./crawler-offsec.sh example.com
 Isso fará o script processar o domínio example.com, onde:
 
 Ele irá varrer o site usando wget2 e buscar URLs.
