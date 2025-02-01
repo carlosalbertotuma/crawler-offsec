@@ -1,6 +1,7 @@
 # Crawler OffSec
 
-![image](https://github.com/user-attachments/assets/291bc783-c3b0-49e4-a48a-fd45ee6d60ed)
+![image](https://github.com/user-attachments/assets/c3a76832-9c79-448f-8e0d-2f03a3a96832)
+
 
 Este é um crawler desenvolvido para coletar links de websites e subdomínios usando o wget2. O script realiza a varredura recursiva de um domínio, identifica URLs e subdomínios, e os salva em arquivos de texto para análise posterior.
 
