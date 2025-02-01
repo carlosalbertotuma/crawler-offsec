@@ -1,18 +1,22 @@
-#Crawler OffSec
+# Crawler OffSec
+Este é um crawler desenvolvido para coletar links de websites e subdomínios usando o wget2. O script realiza a varredura recursiva de um domínio, identifica URLs e subdomínios, e os salva em arquivos de texto para análise posterior.
 
-Este é um crawler simples que utiliza o wget2 para verificar links e coletar URLs interessantes de um domínio ou subdomínio.
+# Descrição
+Este script foi desenvolvido para automatizar o processo de varredura de websites e subdomínios, coletando URLs importantes que podem ser úteis para testes de segurança e auditorias. Ele utiliza o wget2, uma ferramenta rápida e robusta para baixar e verificar sites de forma eficiente.
 
-#Descrição
-O script verifica URLs fornecidas, identifica subdomínios e os lista em um arquivo, além de buscar por URLs adicionais. Ele foi projetado para facilitar a coleta de links de sites e suas páginas.
+# Funcionalidades
+Varredura Recursiva: O script utiliza o wget2 com a opção --spider para realizar a varredura de um site e identificar links internos.
+Identificação de Subdomínios: Ele detecta subdomínios e URLs interessantes que pertencem ao domínio principal.
+Armazenamento de Resultados: Os URLs coletados são salvos em arquivos .txt para análise posterior.
 
-#Pré-requisitos
+# Pré-requisitos
 Para rodar o script, você precisa ter o wget2 instalado em seu sistema. Caso não tenha o wget2 instalado, você pode instalá-lo com:
 
-#Para sistemas baseados em Debian/Ubuntu:
+# Para sistemas baseados em Debian/Ubuntu:
 sudo apt update
 sudo apt install wget2
 
-#Como usar
+# Como usar
 
 Passo 1: Baixe o script
 Clone o repositório onde o script está armazenado (supondo que o repositório seja o git@github.com:usuario/repo.git):
@@ -38,76 +42,4 @@ Passo 4: Arquivos gerados
 example.com.txt: Contém URLs encontradas durante o processo de varredura.
 example.com_full.txt: Contém URLs completas e subdomínios descobertos durante a segunda varredura.
 Como funciona
-O script realiza as seguintes etapas:
 
-Banner: Exibe uma mensagem personalizada com o nome do script e do desenvolvedor.
-
-A função banner() exibe a seguinte saída:
-
-
-+-+-+-+-+-+-+-+ +-+-+-+-+-+-+
-|C|r|a|w|l|e|r| |O|f|f|S|e|c|
-+-+-+-+-+-+-+-+ +-+-+-+-+-+-+
-Desenvolvido por bl4dsc4n
-Coleta de URLs: Usa o comando wget2 com a opção --spider para verificar o site e coletar os links encontrados, filtrando apenas as URLs com o comando grep e cut, e salva em um arquivo com o nome do domínio (por exemplo, example.com.txt).
-
-O comando:
-
-bash
-Copiar
-wget2 --spider -r ${1} |  grep "Adding URL:" | cut -d " " -f 3 | tee ${1}.txt
---spider: Apenas verifica o site, sem fazer o download dos arquivos.
--r: Faz a varredura recursiva para descobrir todas as páginas do site.
-grep "Adding URL:": Filtra as URLs encontradas.
-cut -d " " -f 3: Extrai a URL que aparece como o terceiro campo.
-tee ${1}.txt: Salva a saída em um arquivo chamado ${1}.txt, onde ${1} é o domínio passado como argumento.
-Identificação de Subdomínios: Usa grep -oP para capturar os subdomínios que pertencem ao domínio principal.
-
-O comando:
-
-bash
-Copiar
-URLS=$(cat ${1}.txt | grep -oP "\b([a-zA-Z0-9-]+\.)+${1}\b" | sort -u)
-Captura subdomínios e URLs com o domínio especificado.
-sort -u: Ordena e remove duplicatas.
-Busca nos Subdomínios: Para cada subdomínio encontrado, o script faz uma nova varredura recursiva com wget2 e salva as URLs encontradas em example.com_full.txt.
-
-O comando:
-
-bash
-Copiar
-for i in $URLS; do
-    wget2 --tries=1 --connect-timeout=10 --read-timeout=10 --timeout=20 --spider -r ${i} |  grep "Adding URL:" | cut -d " " -f 3 | tee ${1}_full.txt
-done
---tries=1: Limita o número de tentativas para 1, para evitar tentativas repetidas.
---connect-timeout=10: Define o tempo limite de conexão.
---read-timeout=10: Define o tempo limite de leitura de dados.
---timeout=20: Define um tempo limite geral de 20 segundos para a execução.
-Para cada URL ou subdomínio, o script coleta mais URLs e as adiciona ao arquivo de saída.
-
-Exemplo de Saída
-Quando você executa o script com o domínio example.com, ele pode gerar algo assim:
-
-bash
-Copiar
-$ ./crawler.sh example.com
-+-+-+-+-+-+-+-+ +-+-+-+-+-+-+
-|C|r|a|w|l|e|r| |O|f|f|S|e|c|
-+-+-+-+-+-+-+-+ +-+-+-+-+-+-+
-Desenvolvido por bl4dsc4n
-...
-
-arquivos interessantes
-example.com
-sub1.example.com
-sub2.example.com
-...
-
-Além disso, ele cria dois arquivos:
-
-example.com.txt com URLs coletadas.
-example.com_full.txt com subdomínios e URLs descobertos.
-Considerações Finais
-Certifique-se de ter o wget2 instalado antes de executar o script.
-O script foi projetado para funcionar de forma simples e rápida, sem interação manual.
-O tempo de execução pode variar dependendo do número de páginas e subdomínios encontrados.
