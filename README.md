@@ -45,6 +45,7 @@ example.com.txt: Contém URLs encontradas durante o processo de varredura.
 example.com_full.txt: Contém URLs completas e subdomínios descobertos durante a segunda varredura.
 Como funciona
 
+- Utilize-o com responsabilidade e somente em ambientes que você tem autorização para testar.
 
 ## 🤝 Colaboradores
 
