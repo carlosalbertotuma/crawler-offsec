@@ -15,7 +15,7 @@ if [ "$#" -ne 1 ]; then
 fi
 banner
 wget2 --spider -r ${1} |  grep "Adding URL:" | cut -d " " -f 3 | tee ${1}.txt 
-echo "arquivos interessantes"
+echo "Localizando subdominios"
 URLS=$(cat ${1}.txt | grep -oP "\b([a-zA-Z0-9-]+\.)+${1}\b" | sort -u)
 echo $URLS
 for i in $URLS; do wget2 --tries=1 --connect-timeout=10 --read-timeout=10 --timeout=20 --spider -r ${i} |  grep "Adding URL:" | cut -d " " -f 3 | tee ${1}_full.txt; done
