@@ -43,3 +43,32 @@ example.com.txt: Contém URLs encontradas durante o processo de varredura.
 example.com_full.txt: Contém URLs completas e subdomínios descobertos durante a segunda varredura.
 Como funciona
 
+
+## 🤝 Colaboradores
+
+Agradecemos às seguintes pessoas que contribuíram para este projeto:
+
+<table>
+  <tr>
+    <td align="center">
+      <a href="#">
+        <img src="bl4dsc4n.jpeg" width="100px;" alt="Carlos Tuma - Bl4dSc4n"/><br>
+        <sub>
+          <b>Carlos Tuma - Bl4dSc4n</b>
+        </sub>
+      </a>
+    </td>
+    <td align="center">
+  </tr>
+</table>
+
+
+## 📝 Licença
+
+Esse projeto está sob é de livre uso e modificação, favor manter os créditos em comentário.
+ 
+Ps. não utilize para crimes ciberneticos, não tenho responsábilidade do mau uso da ferramenta.
+
+[⬆ Voltar ao topo](#nome-do-projeto)<br>
+
+
