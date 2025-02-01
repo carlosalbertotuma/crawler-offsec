@@ -11,9 +11,9 @@
 Este crawler  foi desenvolvido para automatizar o processo de varredura de websites e subdomínios, coletando URLs importantes que podem ser úteis para testes de segurança e auditorias. Ele utiliza o wget2, uma ferramenta rápida e robusta para baixar e verificar sites de forma eficiente.
 
 # Funcionalidades
-Varredura Recursiva: O script utiliza o wget2 com a opção --spider para realizar a varredura de um site e identificar links internos.
-Identificação de Subdomínios: Ele detecta subdomínios e URLs interessantes que pertencem ao domínio principal.
-Armazenamento de Resultados: Os URLs coletados são salvos em arquivos .txt para análise posterior.
+- Varredura Recursiva: O script utiliza o wget2 com a opção --spider para realizar a varredura de um site e identificar links internos.
+- Identificação de Subdomínios: Ele detecta subdomínios e URLs interessantes que pertencem ao domínio principal.
+- Armazenamento de Resultados: Os URLs coletados são salvos em arquivos .txt para análise posterior.
 
 # Pré-requisitos
 Para rodar o script, você precisa ter o wget2 instalado em seu sistema. Caso não tenha o wget2 instalado, você pode instalá-lo com:
@@ -35,7 +35,7 @@ Passo 2: Torne o script executável
 - chmod +x crawler-offsec.sh
 
 Passo 3: Execute o script
-- Para rodar o script, basta passar o domínio como parâmetro, como neste exemplo:
+Para rodar o script, basta passar o domínio como parâmetro, como neste exemplo:
 
 - ./crawler-offsec.sh example.com
 
@@ -50,9 +50,8 @@ Passo 4: Arquivos gerados
 - example.com.txt: Contém URLs encontradas durante o processo de varredura.
 - example.com_full.txt: Contém URLs completas e subdomínios descobertos durante a segunda varredura.
 
-Como funciona
 
-- Utilize-o com responsabilidade e somente em ambientes que você tem autorização para testar.
+Utilize-o com responsabilidade e somente em ambientes que você tem autorização para testar.
 
 ## 🤝 Colaboradores
 
