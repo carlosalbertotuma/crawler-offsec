@@ -1,47 +1,39 @@
 #Crawler OffSec
 
-Este é um crawler simples para recursos de segurança (OffSec) que utiliza o wget2 para verificar links e coletar URLs interessantes de um domínio ou subdomínio.
+Este é um crawler simples que utiliza o wget2 para verificar links e coletar URLs interessantes de um domínio ou subdomínio.
 
-Descrição
+#Descrição
 O script verifica URLs fornecidas, identifica subdomínios e os lista em um arquivo, além de buscar por URLs adicionais. Ele foi projetado para facilitar a coleta de links de sites e suas páginas.
 
-Pré-requisitos
+#Pré-requisitos
 Para rodar o script, você precisa ter o wget2 instalado em seu sistema. Caso não tenha o wget2 instalado, você pode instalá-lo com:
 
-Para sistemas baseados em Debian/Ubuntu:
-bash
-Copiar
+#Para sistemas baseados em Debian/Ubuntu:
 sudo apt update
 sudo apt install wget2
-Para sistemas baseados em Red Hat/CentOS:
-bash
-Copiar
-sudo yum install wget2
-Como usar
+
+#Como usar
+
 Passo 1: Baixe o script
 Clone o repositório onde o script está armazenado (supondo que o repositório seja o git@github.com:usuario/repo.git):
 
-bash
-Copiar
 git clone https://github.com/usuario/repo.git
 cd repo
 Ou, se preferir, crie um arquivo .sh e cole o script nele.
 
 Passo 2: Torne o script executável
-bash
-Copiar
 chmod +x crawler.sh
+
 Passo 3: Execute o script
 Para rodar o script, basta passar o domínio como parâmetro, como neste exemplo:
 
-bash
-Copiar
 ./crawler.sh example.com
 Isso fará o script processar o domínio example.com, onde:
 
 Ele irá varrer o site usando wget2 e buscar URLs.
 Ele cria um arquivo de saída example.com.txt com os URLs coletados.
 Depois, ele busca subdomínios e adiciona os resultados em outro arquivo example.com_full.txt.
+
 Passo 4: Arquivos gerados
 example.com.txt: Contém URLs encontradas durante o processo de varredura.
 example.com_full.txt: Contém URLs completas e subdomínios descobertos durante a segunda varredura.
@@ -52,8 +44,7 @@ Banner: Exibe uma mensagem personalizada com o nome do script e do desenvolvedor
 
 A função banner() exibe a seguinte saída:
 
-diff
-Copiar
+
 +-+-+-+-+-+-+-+ +-+-+-+-+-+-+
 |C|r|a|w|l|e|r| |O|f|f|S|e|c|
 +-+-+-+-+-+-+-+ +-+-+-+-+-+-+
