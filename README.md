@@ -3,10 +3,8 @@
 ![image](https://github.com/user-attachments/assets/c3a76832-9c79-448f-8e0d-2f03a3a96832)
 
 
-Este é um crawler desenvolvido para coletar links de websites e subdomínios usando o wget2. O script realiza a varredura recursiva de um domínio, identifica URLs e subdomínios, e os salva em arquivos de texto para análise posterior.
-
 # Descrição
-Este script foi desenvolvido para automatizar o processo de varredura de websites e subdomínios, coletando URLs importantes que podem ser úteis para testes de segurança e auditorias. Ele utiliza o wget2, uma ferramenta rápida e robusta para baixar e verificar sites de forma eficiente.
+Este crawler  foi desenvolvido para automatizar o processo de varredura de websites e subdomínios, coletando URLs importantes que podem ser úteis para testes de segurança e auditorias. Ele utiliza o wget2, uma ferramenta rápida e robusta para baixar e verificar sites de forma eficiente.
 
 # Funcionalidades
 Varredura Recursiva: O script utiliza o wget2 com a opção --spider para realizar a varredura de um site e identificar links internos.
